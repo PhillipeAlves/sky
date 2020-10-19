@@ -1,4 +1,4 @@
-![Banner](/public/sky.gif)
+![Banner](/public/banner-sky.gif)
 
 ## The Project
 
