@@ -3,7 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 
 const display = keyframes`
         0%,
-        20% {
+        30% {
           opacity: 1;
         }
         40%,
@@ -35,22 +35,24 @@ const createStars = (stars) => {
     const size = `${Math.floor(Math.random(1) + 3)}px`;
     const bottom = `${Math.floor(Math.random(1) * (1500 - 10) + 100)}px`;
 
-    const shine = keyframes`
+    const star = keyframes`
         0% {
-        opacity: 0; 
+        opacity: 0;
+        transform: translateX(0px);
         }
         100% {
-        opacity: 1;     
+        opacity: 1;
+        transform: translateX(${Math.floor(Math.random(1) * 50)}px);     
         }
       `;
 
-    const animation = () =>
+    const starAnimation = () =>
       css`
-        ${shine} ${Math.floor(Math.random(1) * 50 + 5)}s infinite alternate;
+        ${star} ${Math.floor(Math.random(1) * 50 + 5)}s infinite alternate;
       `;
 
     const Stars = styled.div`
-      animation: ${animation};
+      animation: ${starAnimation};
       left: ${left};
       width: ${size};
       height: ${size};
@@ -59,14 +61,14 @@ const createStars = (stars) => {
       position: absolute;
       border-radius: 50%;
       box-shadow: 0 0 ${Math.floor(Math.random(1) * 5)}px
-        ${Math.floor(Math.random(1) * 5)}px white;
+        ${Math.floor(Math.random(1) * 5)}px ${randomColor};
     `;
 
     return <Stars key={key} />;
   });
 };
 
-const stars = createStars(100);
+const stars = createStars(150);
 
 const StarsComponent = () => <Night>{stars}</Night>;
 
