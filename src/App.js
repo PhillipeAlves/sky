@@ -1,16 +1,14 @@
-import React from "react";
-import Clouds from "./Components/Clouds";
-import Stars from "./Components/Stars";
-import Sky from "./Components/Sky";
+import React from 'react'
+import { SkyComponent, StarsComponent, CloudsComponent } from './Components'
 
 const App = () => {
   return (
-    <div>
-      <Sky />
-      <Stars />
-      <Clouds />
-    </div>
-  );
-};
+    <React.Fragment>
+      <SkyComponent />
+      <StarsComponent />
+      <CloudsComponent />
+    </React.Fragment>
+  )
+}
 
-export default App;
+export default App

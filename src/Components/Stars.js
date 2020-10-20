@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { css, keyframes } from "styled-components";
+import React from 'react'
+import styled, { css, keyframes } from 'styled-components'
 
 const display = keyframes`
         0%,
@@ -14,26 +14,30 @@ const display = keyframes`
         100% {
           opacity: 1;
         }
-      `;
+      `
 
 const displayStars = () =>
   css`
     ${display} 30s linear infinite
-  `;
+  `
 
 const Night = styled.div`
   animation: ${displayStars};
-`;
+`
 
-const createStars = (stars) => {
-  stars = [...Array(stars + 1).keys()];
+const createStars = stars => {
+  stars = [...Array(stars + 1).keys()]
 
   return stars.map((_, key) => {
-    const colors = ["rgb(255, 255, 255)", "rgb(255, 255, 217)"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    const left = `${Math.floor(Math.random(1) * 100)}vw`;
-    const size = `${Math.floor(Math.random(1) + 3)}px`;
-    const bottom = `${Math.floor(Math.random(1) * (1500 - 10) + 100)}px`;
+    const colors = [
+      'rgb(255, 255, 255)',
+      'rgb(255, 255, 217)',
+      'rgb(255, 245, 200)'
+    ]
+    const randomColor = colors[Math.floor(Math.random() * colors.length)]
+    const left = `${Math.floor(Math.random(1) * 100)}vw`
+    const size = `${Math.floor(Math.random(1) + 3)}px`
+    const bottom = `${Math.floor(Math.random(1) * (1500 - 10) + 100)}px`
 
     const star = keyframes`
         0% {
@@ -42,14 +46,14 @@ const createStars = (stars) => {
         }
         100% {
         opacity: 1;
-        transform: translateX(${Math.floor(Math.random(1) * 50)}px);     
+        transform: translateX(${Math.floor(Math.random(1) * 10)}px);     
         }
-      `;
+      `
 
     const starAnimation = () =>
       css`
         ${star} ${Math.floor(Math.random(1) * 50 + 5)}s infinite alternate;
-      `;
+      `
 
     const Stars = styled.div`
       animation: ${starAnimation};
@@ -62,14 +66,12 @@ const createStars = (stars) => {
       border-radius: 50%;
       box-shadow: 0 0 ${Math.floor(Math.random(1) * 5)}px
         ${Math.floor(Math.random(1) * 5)}px ${randomColor};
-    `;
+    `
 
-    return <Stars key={key} />;
-  });
-};
+    return <Stars key={key} />
+  })
+}
 
-const stars = createStars(150);
+const stars = createStars(150)
 
-const StarsComponent = () => <Night>{stars}</Night>;
-
-export default StarsComponent;
+export const StarsComponent = () => <Night>{stars}</Night>
