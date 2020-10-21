@@ -13,4 +13,4 @@ This is a small React project that focus on the use of Styled Components for dyn
 
 > **SKY**: [_here_](https://github.com/PhillipeAlves/sky/blob/source/src/Components/Sky.js) || **CLOUDS**: [_here_](https://github.com/PhillipeAlves/sky/blob/source/src/Components/Clouds.js) || **STARS**: [_here_](https://github.com/PhillipeAlves/sky/blob/source/src/Components/Stars.js)
 
-[<img alt="project-view" src="https://us.123rf.com/450wm/giamportone/giamportone1804/giamportone180400109/99753262-stock-vector-click-here-button-with-arrow-pointer-icon.jpg?ver=6" width="20%">.](https://phillipealves.com/sky/)
+[<img alt="project-view" src="https://us.123rf.com/450wm/giamportone/giamportone1804/giamportone180400109/99753262-stock-vector-click-here-button-with-arrow-pointer-icon.jpg?ver=6" width="30%">.](https://phillipealves.com/sky/)
